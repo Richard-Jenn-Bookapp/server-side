@@ -3,6 +3,7 @@ require ('dotenv').config();
 const express = require('express');
 const app = express();
 const pg = require('pg');
+const cors = require('cors');
 
 const PORT = process.env.PORT;
 const client = new pg.Client( process.env.DATABASE_URL);
@@ -22,3 +23,5 @@ app.get('/api/v1/books/:book', (req, res) => {
 app.listen(PORT, () => { 
     console.log(`Listening for API requests to port ${PORT}`);
 });
+
+app.use(cors());

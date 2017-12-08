@@ -11,3 +11,17 @@
 ROUTES
 GET api/v1/books/
 GET api/v1/books/:book
+
+
+Client side
+
+create index.html page
+   to show all cards info
+
+   npm i -s cors
+   require in server,js
+   app.use(cors());
+
+
+   in cards.js
+ 
