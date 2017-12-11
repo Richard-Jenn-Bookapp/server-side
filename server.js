@@ -11,6 +11,8 @@ const client = new pg.Client( process.env.DATABASE_URL);
 
 client.connect();
 
+
+
 app.get('/api/v1/books', (req, res) => {
     client.query(`SELECT * FROM books;`)
         .then(data => res.send(data.rows));
