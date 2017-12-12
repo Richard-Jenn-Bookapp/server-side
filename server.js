@@ -4,6 +4,7 @@ const express = require('express');
 const app = express();
 const pg = require('pg');
 const cors = require('cors');
+const conString = 'postgres://postgres:jenny@localhost:5432/books';
 
 app.use(cors());
 const PORT = process.env.PORT;
