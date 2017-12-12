@@ -28,12 +28,8 @@ VALUES ('5', 'Robert A Heinlein', 'Stranger in a Strange Land', 'ISBN_13 9780143
 
 --IN HTML ADD ROUTES TAG       <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
 
-<<<<<<< HEAD
 "title": "The Left Hand of Darkness",
       "author": "Ursula K. Le Guid",
       "isbn": "ISBN_13 9780143111597",
       "image_url": "http://books.google.com/books/content?id=f9QiDQAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
       "description": "A deluxe hardcover edition of the queen of science fiction's trailblazing novel about a planet full of genderless beings--part of Penguin Galaxy, a collectible series",
-=======
-Install body parser
->>>>>>> d6162455e07c4d81d3d902694ff47189f9c216b4
