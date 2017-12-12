@@ -4,12 +4,15 @@ const express = require('express');
 const app = express();
 const pg = require('pg');
 const cors = require('cors');
+const conString = 'postgres://postgres:jenny@localhost:5432/books';
 
 app.use(cors());
 const PORT = process.env.PORT;
 const client = new pg.Client( process.env.DATABASE_URL);
 
 client.connect();
+
+
 
 app.get('/api/v1/books', (req, res) => {
     client.query(`SELECT * FROM books;`)
@@ -20,8 +23,6 @@ app.get('/api/v1/books/:book', (req, res) => {
     client.query(`SELECT * FROM books WHERE book = $1;`, [req.params.book])
         .then(data => res.send(data.rows));
 });
-
-
 
 
 app.listen(PORT, () => { 
