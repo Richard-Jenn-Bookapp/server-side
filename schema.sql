@@ -8,11 +8,7 @@ INSERT INTO books
 VALUES ('1','Patrick Rothfuss', 'The Name of the Wind', 'ISBN_13 9780575087057', 'https://books.google.com/books/content?id=BcG2dVRXKukC&printsec=frontcover&img=1&zoom=5&source=gbs_api', 'I have stolen princesses back from sleeping barrow kings. I burned down the town of Trebon. I have spent the night with Felurian and left with both my sanity and my life. I was expelled from the University at a younger age than most people are allowed in. I tread paths by moonlight that others fear to speak of during day. I have talked to Gods, loved women, and written songs that make the minstrels weep. My name is Kvothe. The Name of the Wind is fantasy at its very best, and an astounding must-read title.');
 
 INSERT INTO books
-<<<<<<< HEAD
-VALUES ('2', 'Frank Herbert', 'Dune', 'ISBN_13 9780441013593', 'image_url": "http://books.google.com/books/content?id=B1hSG45JCX4C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api', 'Follows the adventures of Paul Atreides, the son of a betrayed duke given up for dead on a treacherous desert planet and adopted by its fierce, nomadic people, who help him unravel his most unexpected destiny.');
-=======
 VALUES ('2', 'Frank Herbert', 'Dune', 'ISBN_13 9780441013593', 'http://books.google.com/books/content?id=B1hSG45JCX4C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api', 'Follows the adventures of Paul Atreides, the son of a betrayed duke given up for dead on a treacherous desert planet and adopted by its fierce, nomadic people, who help him unravel his most unexpected destiny.');
->>>>>>> d6162455e07c4d81d3d902694ff47189f9c216b4
     
 
 INSERT INTO books
