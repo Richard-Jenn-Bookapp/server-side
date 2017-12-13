@@ -8,12 +8,23 @@ const bodyParser = require('body-parser');
 const superagent = require('superagent');
 
 
+
 const PORT = process.env.PORT;
 // const G_API_KEY = process.env.G_API_KEY;
 // console.log(G_API_KEY);
 const client = new pg.Client( process.env.DATABASE_URL);
+
+
+// const conString = 'postgres://@localhost:5432/books';
+
 client.connect();
 
+app.use(cors());
+
+app.use((req, res, next) => {
+    console.log('received a request!');
+    next();
+});
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -101,9 +112,6 @@ app.get('/api/v1/books/:id', (req, res) => {
         .catch(console.error);
 });
 
-
 app.listen(PORT, () => {
     console.log(`Listening for API requests to port ${PORT}`);
 });
-
-
