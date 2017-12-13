@@ -27,5 +27,15 @@ VALUES ('5', 'Robert A Heinlein', 'Stranger in a Strange Land', 'ISBN_13 9780143
 
 
 --IN HTML ADD ROUTES TAG       <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
-
 Install body parser
+
+for Books/seaRCH
+const googleUrl = 'https://www.googleapis.com/books/v1/volumes?q=inauthor&dianaAIzaSyDcDfa3mkAapMJMvnuirS0GJetWo9_R5dY'
+app.get('/search', (req, res) => {
+    superagent
+    .get('')
+    .end((err,data => {
+        console.log('data from books')
+        res.send(data,text)
+    });
+});
