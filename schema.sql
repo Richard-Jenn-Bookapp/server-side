@@ -24,10 +24,6 @@ INSERT INTO books
 VALUES ('5', 'Robert A Heinlein', 'Stranger in a Strange Land', 'ISBN_13 9780143111627', 'http://books.google.com/books/content?id=p9UiDQAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api', 'A deluxe hardcover edition of the most famous science-fiction novel of all time--part of Penguin Galaxy, a collectible series of six sci-fi/fantasy classics, featuring a series introduction by Neil Gaiman A human raised on Mars, Valentine Michael Smith has just arrived on planet Earth. Among his people for the first time, he struggles to understand the social mores and prejudices of human nature that are so alien to him, while his own ,psi,powers--including telepathy, clairvoyance, telekenesis, and teleportation--make him a type of messiah figure among humans. Stranger in a Strange Land grew from a cult favorite to a bestseller to a classic in a few short years.');
 
 
-
-
---IN HTML ADD ROUTES TAG       <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
-
 "title": "The Left Hand of Darkness",
       "author": "Ursula K. Le Guid",
       "isbn": "ISBN_13 9780143111597",
