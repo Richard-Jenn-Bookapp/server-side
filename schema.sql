@@ -24,18 +24,8 @@ INSERT INTO books
 VALUES ('5', 'Robert A Heinlein', 'Stranger in a Strange Land', 'ISBN_13 9780143111627', 'http://books.google.com/books/content?id=p9UiDQAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api', 'A deluxe hardcover edition of the most famous science-fiction novel of all time--part of Penguin Galaxy, a collectible series of six sci-fi/fantasy classics, featuring a series introduction by Neil Gaiman A human raised on Mars, Valentine Michael Smith has just arrived on planet Earth. Among his people for the first time, he struggles to understand the social mores and prejudices of human nature that are so alien to him, while his own ,psi,powers--including telepathy, clairvoyance, telekenesis, and teleportation--make him a type of messiah figure among humans. Stranger in a Strange Land grew from a cult favorite to a bestseller to a classic in a few short years.');
 
 
-
-
---IN HTML ADD ROUTES TAG       <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
-Install body parser
-
-for Books/seaRCH
-const googleUrl = 'https://www.googleapis.com/books/v1/volumes?q=inauthor&dianaAIzaSyDcDfa3mkAapMJMvnuirS0GJetWo9_R5dY'
-app.get('/search', (req, res) => {
-    superagent
-    .get('')
-    .end((err,data => {
-        console.log('data from books')
-        res.send(data,text)
-    });
-});
+"title": "The Left Hand of Darkness",
+      "author": "Ursula K. Le Guid",
+      "isbn": "ISBN_13 9780143111597",
+      "image_url": "http://books.google.com/books/content?id=f9QiDQAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "description": "A deluxe hardcover edition of the queen of science fiction's trailblazing novel about a planet full of genderless beings--part of Penguin Galaxy, a collectible series",
