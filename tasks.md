@@ -4,7 +4,7 @@
 - Ability to add new book
 - Add message saying that route isn't valid for any other endpoint DONE
 
-*UI*
+**UI**
 - Mobile-friendly, single-page view with routes:
     - In routes.js and add the following endpoints:
         - List View: Books by title and author with the image_url displaying a rendered image of the book
@@ -16,6 +16,7 @@
 - Styling:
     - Style using mobile-only approach; use  provided wireframes as a general guideline for the minimum styling requirements, while adding your own personal taste and color palette.
     - Ensure the proper use of SMACCS principles.
+
 
 ##LAB 13
 **Add delete functionality** (IF TIME)

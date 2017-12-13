@@ -5,7 +5,7 @@ const app = express();
 const pg = require('pg');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const superagent = require('superagent');
+// const superagent = require('superagent');
 
 
 
@@ -58,11 +58,9 @@ app.get('/api/v1/books', (req, res) => {
 
 app.post('/api/v1/books', (req, res) => {
     client.query(`
-      INSERT INTO books (id, author, title, isbn, image_url, description)
-      VALUES ($1, $2, $3, $4, $5, $6);
+      INSERT INTO books (author, title, isbn, image_url, description)
+      VALUES ($1, $2, $3, $4, $5);
       `, [
-          
-            req.body.id,
             req.body.author,
             req.body.title,
             req.body.isbn,
