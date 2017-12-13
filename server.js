@@ -5,7 +5,7 @@ const app = express();
 const pg = require('pg');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const superagent = require('superagent');
+// const superagent = require('superagent');
 
 
 const PORT = process.env.PORT;
@@ -46,6 +46,8 @@ app.get('/api/v1/books', (req, res) => {
 });
 
 app.post('/api/v1/books', (req, res) => {
+    console.log('-----------------------');
+    console.log(req, body);
     client.query(`
       INSERT INTO books (id, author, title, isbn, image_url, description)
       VALUES ($1, $2, $3, $4, $5, $6);
@@ -58,15 +60,10 @@ app.post('/api/v1/books', (req, res) => {
             req.body.image_url,
             req.body.description,
         ])
-        .then(data => res.send(data.rows))
+        .then(data => res.status(201).send(data.rows))
         .catch(console.error);
 });
 
-app.get('api/v1/books/:id', (req, res) => {
-    client.query(`SELECT * FROM books WHERE id = $1`, [req.params.id])
-        .then(data => res.send(data.rows))
-        .catch(console.error);
-});
 
 app.put('/api/v1/books/:id', (req, res) => {
     client.query(`
@@ -77,7 +74,8 @@ app.put('/api/v1/books/:id', (req, res) => {
             req.body.title,
             req.body.isbn,
             req.body.image_url,
-            req.body.description
+            req.body.description,
+            req.params.title,
         ])
         .then(data => res.status(200).send('Book updated'))
 
@@ -94,7 +92,7 @@ app.delete('/api/v1/books/:id', (req, res) => {
 
 
 app.get('/api/v1/books/:id', (req, res) => {
-    client.query(`SELECT * FROM books WHERE id = $1;`, [
+    client.query(`SELECT * FROM books WHERE book_id = $1;`, [
         req.params.id
     ])
         .then(data => res.send(data.rows))
