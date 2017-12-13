@@ -12,8 +12,18 @@ const PORT = process.env.PORT;
 // const G_API_KEY = process.env.G_API_KEY;
 // console.log(G_API_KEY);
 const client = new pg.Client( process.env.DATABASE_URL);
+
+
+// const conString = 'postgres://@localhost:5432/books';
+
 client.connect();
 
+app.use(cors());
+
+app.use((req, res, next) => {
+    console.log('received a request!');
+    next();
+});
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -49,11 +59,9 @@ app.post('/api/v1/books', (req, res) => {
     console.log('-----------------------');
     console.log(req, body);
     client.query(`
-      INSERT INTO books (id, author, title, isbn, image_url, description)
-      VALUES ($1, $2, $3, $4, $5, $6);
+      INSERT INTO books (author, title, isbn, image_url, description)
+      VALUES ($1, $2, $3, $4, $5);
       `, [
-          
-            req.body.id,
             req.body.author,
             req.body.title,
             req.body.isbn,
@@ -99,9 +107,6 @@ app.get('/api/v1/books/:id', (req, res) => {
         .catch(console.error);
 });
 
-
 app.listen(PORT, () => {
     console.log(`Listening for API requests to port ${PORT}`);
 });
-
-
